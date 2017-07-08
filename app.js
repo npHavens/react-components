@@ -1,17 +1,15 @@
 // TODO
-class GroceryListItem extends React.Component {
-  render() {
-    return (<li>{this.props.item}</li>);
-  }
+var GroceryListItem = (props) => {
+  return <li>{props.item}</li>;
 }
 
 class GroceryList extends React.Component{
   render() {
-    return (<ul>{
+    return <ul>{
       this.props.items.map((item, i) => {
         return <GroceryListItem item={item} key={i}/>
       })
-    }</ul>)
+    }</ul>
   }
 }
 
